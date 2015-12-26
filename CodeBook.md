@@ -23,8 +23,9 @@ To run the script: source("run_analysis.R")
 
 ## 2. Load all needed .txt files from UCI_HAR_Dataset
    --------------------------------------------------
-   We are not working directly with the raw data in the Inertial_Signals
-   directories of the train and test data so no need to load these.
+   We are only working the already filtered data so no need to load the raw data
+   present in the Inertial_Signals sub directories.--
+
    We load the following files :
 
    Text File Name | Description | Row # | Col #
@@ -48,7 +49,7 @@ To run the script: source("run_analysis.R")
    * results in "all_lab" and "all_set" tables
 
    * After merging, also checked if missing values using colSums(is.na(all_lab))
-     and colSums(is.na(all_set)).
+     and colSums(is.na(all_set)). No values missing.
 
 
 ## 4. Rename column names and activity labelling
@@ -59,14 +60,14 @@ To run the script: source("run_analysis.R")
      using the table provided in activity_labels.txt
 
 
-## 5. Subset table keeping mean and std calculations for each variable
+## 5. Subset table: keep mean and std calculations for each variable
    -------------------------------------------------------------------
    * We do this by grepping on column names that contain the "mean" or "std"
      string of characters (no case-sensitivity and no exact match required).
      Result is a table of 79 remaining columns.
 
 
-## 6. Add the corresponding activity column to the subsetted data set
+## 6. Add activity column to subsetted data set
    ---------------------------------------------------------------
    * Use cbind() function to add the activity labelling corresponding to
      all observations (i.e. rows)
