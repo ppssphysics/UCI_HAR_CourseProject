@@ -1,7 +1,8 @@
 
-# Created 26 December 2015
+
 # README file for Coursera Course Project
-# Course : Getting and Cleening Data
+## Course : Getting and Cleening Data
+## Created 26 December 2015
 
 # Files provided in the directory
 #################################
