@@ -1,10 +1,9 @@
 ## CodeBook.md, created 23 December 2015
 ## Code Book for cleaning accelerometer dataset
 
-### Explaining actions taken to clean data set implemented in R script "run_analysis.R"
-### To run the script: source("run_analysis.R")
-
-### Steps are numbered identically to steps performed in the run_analysis.R script.
+Explaining actions taken to clean data set implemented in R script "run_analysis.R"
+To run the script: source("run_analysis.R")
+Steps are numbered identically to steps performed in the run_analysis.R script.
 
 
 1. Prepare working directory
