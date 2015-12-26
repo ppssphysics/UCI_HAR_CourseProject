@@ -9,6 +9,7 @@ from the accelerometers from the Samsung Galaxy S smartphone based on the Course
 The R script used to produced the cleaning and final output tidy data set **UCI_HAR_Dataset_Tidy.txt**
 is **run_analysis.R**. The steps is this code book are numbered identically to steps performed in
 the run_analysis.R script.
+
 To run the script: source("run_analysis.R")
 
 
