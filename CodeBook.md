@@ -6,18 +6,18 @@ This is the code book that explains the actions taken to clean the data collecte
 from the accelerometers from the Samsung Galaxy S smartphone based on the Coursera
 "Getting and Cleaning Data" Course Project requirements.  
 
-The R script used to produced the cleaning and final output tidy data set UCI_HAR_Dataset_Tidy.txt
-is "run_analysis.R". The steps is this code book are numbered identically to steps performed in
+The R script used to produced the cleaning and final output tidy data set **UCI_HAR_Dataset_Tidy.txt**
+is **run_analysis.R**. The steps is this code book are numbered identically to steps performed in
 the run_analysis.R script.
 To run the script: source("run_analysis.R")
 
 
 ## 1. Prepare working directory
    -------------------------
-   * Searches for "UCI_HAR_Dataset" or "UCI HAR Dataset" directory. If not found, download the zip
+   * Searches for **UCI_HAR_Dataset** or **UCI HAR Dataset** directory. If not found, download the zip
      file again from URL and organizes directory with naming conventions (see below)
-   * Renamed directories "UCI HAR Dataset" "UCI_HAR_Dataset" and
-     "Inertial Signals" to "Inertial_Signals" to avoid dealing
+   * Renamed directories **UCI HAR Dataset** to **UCI_HAR_Dataset** and
+     **Inertial Signals** to **Inertial_Signals** to avoid dealing
      with spaces. Use file.rename function in R.
 
 
@@ -77,6 +77,6 @@ To run the script: source("run_analysis.R")
      is given the mean of the 79 variables for each corresponding activity.
 
 
-## 8. Save the data in output text file
-   -----------------------------------------------------------------
+## 8. Save the data in output text file named **UCI_HAR_Dataset_Tidy.txt**
+   ------------------------------------------------------------------------
    * Use write.table() function with row.name=FALSE
