@@ -48,7 +48,6 @@ To run the script in R : source("run_analysis.R")
    * checks column numbers are the same before binding data sets by row (rbind)
    * merge separately y_*.txt and X_*.txt files
    * results in "all_lab" and "all_set" tables
-
    * After merging, also checked if missing values using colSums(is.na(all_lab))
      and colSums(is.na(all_set)). No values missing.
 
@@ -59,6 +58,7 @@ To run the script in R : source("run_analysis.R")
      to rename columns of the binded "all_lab" and "all_set" tables respectively.
    * rename Activity label column in "all_lab" table using descriptive names
      using the table provided in activity_labels.txt
+     example: Instead of 1 we have WALKING, etc.
 
 
 ## 5. Subset table: keep mean and std calculations for each variable
@@ -79,6 +79,16 @@ To run the script in R : source("run_analysis.R")
    * Use "group_by" and "summarise_each" functions provided by dplyr package.
      The result is a tidy dataset with 6 rows (each type of activity). On each row
      is given the mean of the 79 variables for each corresponding activity.
+   * Example of the data set structure below:
+
+     Activity | tBodyAcc-mean()-X | tBodyAcc-mean()-Y | tBodyAcc-mean()-Z | ...
+     -------- | ----------------- | ----------------- | ------------------| ---
+     WALKING         | 0.2763369   |    -0.01790683    |    -0.1088817 | ...
+     WALKING_UPSTAIRS |         0.2622946    |   -0.02592329     |   -0.1205379 | ...
+     WALKING_DOWNSTAIRS |         0.2881372   |    -0.01631193   |     -0.1057616 | ...
+     SITTING     |    0.2730596   |    -0.01268957    |    -0.1055170 | ...
+     STANDING    |     0.2791535   |    -0.01615189   |     -0.1065869 | ...
+     LAYING      |   0.2686486   |    -0.01831773     |   -0.1074356 | ...
 
 
 ## 8. Save the data in output text file named
