@@ -25,7 +25,6 @@ To run the script: source("run_analysis.R")
    --------------------------------------------------
    We are only working the already filtered data so no need to load the raw data
    present in the Inertial_Signals sub directories.
-   --
 
    We load the following files :
 
