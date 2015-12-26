@@ -16,8 +16,8 @@ Steps are numbered identically to steps performed in the run_analysis.R script.
      with spaces. Use file.rename function in R.
 
 
-## 2. Load all needed .txt files in UCI_HAR_Dataset dir into data frames
-   ------------------------------------------------------------------
+## 2. Load all needed .txt files from UCI_HAR_Dataset
+   --------------------------------------------------
    We are not working directly with the raw data in the Inertial_Signals
    directories of the train and test data so no need to load these.
    We load the following files :
@@ -52,8 +52,8 @@ Steps are numbered identically to steps performed in the run_analysis.R script.
      using the table provided in activity_labels.txt
 
 
-## 5. Subset table keeping only mean and std calculations for each variable
-   ---------------------------------------------------------------------
+## 5. Subset table keeping mean and std calculations for each variable
+   -------------------------------------------------------------------
    * We do this by grepping on column names that contain the "mean" or "std"
      string of characters (no case-sensitivity and no exact match required).
      Result is a table of 79 remaining columns.
@@ -65,13 +65,13 @@ Steps are numbered identically to steps performed in the run_analysis.R script.
      all observations (i.e. rows)
 
 
-## 7. Summarize the data to get mean of all variables by activity group
+## 7. Summarize the data to get mean of variables by activity group
    -----------------------------------------------------------------
    * Use "group_by" and "summarise_each" functions provided by dplyr package.
      The result is a tidy dataset with 6 rows (each type of activity). On each row
      is given the mean of the 79 variables for each corresponding activity.
 
 
-## 8. Save the data in ouput text file
+## 8. Save the data in output text file
    -----------------------------------------------------------------
    * Use write.table() function with row.name=FALSE
