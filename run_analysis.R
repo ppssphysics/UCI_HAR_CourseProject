@@ -63,7 +63,6 @@ if(ncol(trn_lab)!=ncol(tst_lab)) {
 ################################################################
 
 print("4. Renaiming some variables in tables")
-
 c1names <- c("Activity"); colnames(all_lab) <- c1names
 c2names <- feature[,2]; colnames(all_set) <- c2names
 
@@ -75,21 +74,18 @@ all_lab$Activity <- factor(all_lab$Activity,levels = actlabel,labels = actnames)
 #########################################################################
 
 print("5. Subsetting the measurements")
-
 sub_set <- all_set[,grepl("mean|std", colnames(all_set))]
 
 # 6. Add the activity column
 ############################
 
 print("6. Creating final dataset with activity column")
-
 fin_set <- cbind(all_lab,sub_set)
 
 # 7. Create a tidy dataset with mean of all variables for each activity
 # #####################################################################
 
 print("7. Creating tidy data set with mean of variables by activity")
-
 tidyset <- fin_set %>% group_by(Activity) %>% summarise_each(funs(mean))
 tidyset
 
@@ -97,5 +93,4 @@ tidyset
 # #####################################################################
 
 print("8. Saving tidy data set in output textfile")
-
 tidyset <- write.table(tidyset,"UCI_HAR_Dataset_Tidy.txt",row.name=FALSE)
