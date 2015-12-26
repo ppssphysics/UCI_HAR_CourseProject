@@ -24,7 +24,8 @@ To run the script: source("run_analysis.R")
 ## 2. Load all needed .txt files from UCI_HAR_Dataset
    --------------------------------------------------
    We are only working the already filtered data so no need to load the raw data
-   present in the Inertial_Signals sub directories.--
+   present in the Inertial_Signals sub directories.
+   --
 
    We load the following files :
 
