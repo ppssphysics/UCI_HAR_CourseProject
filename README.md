@@ -1,15 +1,18 @@
 
+README.md, Created 26 December 2015
 
 # README.md : Data Science Coursera Project
 # Course : Getting and Cleening Data
-### Created 26 December 2015
 
-1. Files provided in the directory
-   * README.md
-   * CodeBook.md : describes the actions taken in run_analysis.R script
-   * run_analysis.R : script to clean data set and produce tidy UCI_HAR_Dataset_Tidy.txt
-   * UCI_HAR_Dataset_Tidy.txt : tidy data set produced by script run_analysis.R
+## 1. Files provided in the directory
 
-2. Running the code
+Text File Name | Description
+-------------- | -----------
+README.md   |
+CodeBook.md | Explanatory Code Book for data set cleaning
+run_analysis.R | R script to clean Data set
+UCI_HAR_Dataset_Tidy.txt | output tidy data set from run_analysis.R
+
+## 2. Running the code
    * In R prompt : > source("run_analysis.R")
    * If the directory "UCI_HAR_DataSet" or "UCI HAR Dataset" does not exist, data will be downloaded again from server URL.
