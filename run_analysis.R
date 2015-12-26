@@ -4,7 +4,7 @@
 # Course Project
 
 
-# 1. If data directory not there, retireve it from URL
+# 1. If data directory not there, retrieve it from URL
 ######################################################
 
 if (!(dir.exists("UCI_HAR_Dataset")) & !(dir.exists("UCI\ HAR\ Dataset"))) {
@@ -15,7 +15,6 @@ if (!(dir.exists("UCI_HAR_Dataset")) & !(dir.exists("UCI\ HAR\ Dataset"))) {
   dateDownload <- date()
   cat("Downloaded file date :"); dateDownload # cat to avoid new line
   unzip("./SamsungGSData")
-
   # Rename directory "UCI HAR Dataet" and "Inertial Signals"
   file.rename("UCI\ HAR\ Dataset","UCI_HAR_Dataset")
   file.rename("UCI_HAR_Dataset/train/Inertial\ Signals","UCI_HAR_Dataset/train/Inertial_Signals")
