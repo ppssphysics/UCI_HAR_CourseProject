@@ -12,4 +12,4 @@
 
 2. Running the code
    * In R prompt : > source("run_analysis.R")
-   * If the directory UCI_HAR_DataSet does not exist, data will be downloaded again from server URL.
+   * If the directory "UCI_HAR_DataSet" or "UCI HAR Dataset" does not exist, data will be downloaded again from server URL.

@@ -9,7 +9,7 @@
 
 1. Prepare working directory
    -------------------------
-   * Searches for "UCI_HAR_Dataset" directory. If not found, download the zip
+   * Searches for "UCI_HAR_Dataset" or "UCI HAR Dataset" directory. If not found, download the zip
      file again from URL and organizes directory with naming conventions (see below)
    * Renamed directories "UCI HAR Dataset" "UCI_HAR_Dataset" and
      "Inertial Signals" to "Inertial_Signals" to avoid dealing
