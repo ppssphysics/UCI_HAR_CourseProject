@@ -2,9 +2,14 @@ CodeBook.md, created 23 December 2015
 
 # Code Book for cleaning accelerometer dataset
 
-Explaining actions taken to clean data set implemented in R script "run_analysis.R"
+This is the code book that explains the actions taken to clean the data collected
+from the accelerometers from the Samsung Galaxy S smartphone based on the Coursera
+"Getting and Cleaning Data" Course Project requirements.  
+
+The R script used to produced the cleaning and final output tidy data set UCI_HAR_Dataset_Tidy.txt
+is "run_analysis.R". The steps is this code book are numbered identically to steps performed in
+the run_analysis.R script.
 To run the script: source("run_analysis.R")
-Steps are numbered identically to steps performed in the run_analysis.R script.
 
 
 ## 1. Prepare working directory
