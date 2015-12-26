@@ -3,6 +3,7 @@
 # Data Science Specialization - Getting and Cleaning Data
 # Course Project
 
+library(dplyr)
 
 # 1. If data directory not there, retrieve it from URL
 ######################################################
@@ -89,7 +90,6 @@ fin_set <- cbind(all_lab,sub_set)
 
 print("7. Creating tidy data set with mean of variables by activity")
 tidyset <- fin_set %>% group_by(Activity) %>% summarise_each(funs(mean))
-tidyset
 
 # 8. Save the tidy dataset as text file in working directory
 # #####################################################################
