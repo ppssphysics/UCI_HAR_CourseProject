@@ -27,6 +27,15 @@ To run the script: source("run_analysis.R")
    directories of the train and test data so no need to load these.
    We load the following files :
 
+   Text File Name | Description
+   -------------- | -------------
+   features.txt   | full list of features (variable name)
+   activity_labels.txt | list of integer values referring to the activity
+   train/X_train.txt | measured features in training data set (561 col, 7352 rows)
+   train/y_train.txt | training labels (1 col, 7352 rows)
+   test/X_test.txt | measured features in testing data set (561 col, 2947 rows)
+   test/y_test.txt | testing labels (1 col, 2947 rows)
+
    * features.txt // full list of features (variable name)
    * activity_labels.txt // list of integer values referring to the activity
    * train/X_train.txt // measured features in training data set (561 col, 7352 rows)
@@ -77,6 +86,7 @@ To run the script: source("run_analysis.R")
      is given the mean of the 79 variables for each corresponding activity.
 
 
-## 8. Save the data in output text file named **UCI_HAR_Dataset_Tidy.txt**
-   ------------------------------------------------------------------------
+## 8. Save the data in output text file named
+   -------------------------------------------
    * Use write.table() function with row.name=FALSE
+   * Saves output file **UCI_HAR_Dataset_Tidy.txt** in working directory
