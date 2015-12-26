@@ -7,14 +7,7 @@
 # 1. If data directory not there, retireve it from URL
 ######################################################
 
-if (dir.exists("UCI\ HAR\ Dataset")) {
-  file.rename("UCI\ HAR\ Dataset","UCI_HAR_Dataset")
-  file.rename("UCI_HAR_Dataset/train/Inertial\ Signals","UCI_HAR_Dataset/train/Inertial_Signals")
-  file.rename("UCI_HAR_Dataset/test/Inertial\ Signals","UCI_HAR_Dataset/test/Inertial_Signals")
-  print("1. Using UCI HAR Dataset found in local dir for analysis")
-}
-if (!(dir.exists("UCI_HAR_Dataset"))) {
-
+if (!(dir.exists("UCI_HAR_Dataset")) & !(dir.exists("UCI\ HAR\ Dataset"))) {
   # Retrieve data from server
   print("1.The data was not found in local directory, retrieving from server")
   fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
@@ -24,6 +17,12 @@ if (!(dir.exists("UCI_HAR_Dataset"))) {
   unzip("./SamsungGSData")
 
   # Rename directory "UCI HAR Dataet" and "Inertial Signals"
+  file.rename("UCI\ HAR\ Dataset","UCI_HAR_Dataset")
+  file.rename("UCI_HAR_Dataset/train/Inertial\ Signals","UCI_HAR_Dataset/train/Inertial_Signals")
+  file.rename("UCI_HAR_Dataset/test/Inertial\ Signals","UCI_HAR_Dataset/test/Inertial_Signals")
+}
+if (dir.exists("UCI\ HAR\ Dataset")) {
+  print("1. Using UCI HAR Dataset found in local dir for analysis")
   file.rename("UCI\ HAR\ Dataset","UCI_HAR_Dataset")
   file.rename("UCI_HAR_Dataset/train/Inertial\ Signals","UCI_HAR_Dataset/train/Inertial_Signals")
   file.rename("UCI_HAR_Dataset/test/Inertial\ Signals","UCI_HAR_Dataset/test/Inertial_Signals")

@@ -1,5 +1,5 @@
 
-README.md, Created 26 December 2015, Getting and Cleaning Data
+README.md, Created 26 December 2015, Coursera Getting and Cleaning Data Course
 
 ## 1. Files provided in the directory
 
