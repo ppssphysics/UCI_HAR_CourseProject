@@ -1,8 +1,7 @@
 
 README.md, Created 26 December 2015
 
-# README.md : Data Science Coursera Project
-# Course : Getting and Cleening Data
+# README : Coursera Project in Data Science, Course "Getting and Cleaning Data"
 
 ## 1. Files provided in the directory
 
