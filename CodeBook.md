@@ -27,21 +27,14 @@ To run the script: source("run_analysis.R")
    directories of the train and test data so no need to load these.
    We load the following files :
 
-   Text File Name | Description
-   -------------- | -------------
-   features.txt   | full list of features (variable name)
-   activity_labels.txt | list of integer values referring to the activity
-   train/X_train.txt | measured features in training data set (561 col, 7352 rows)
-   train/y_train.txt | training labels (1 col, 7352 rows)
-   test/X_test.txt | measured features in testing data set (561 col, 2947 rows)
-   test/y_test.txt | testing labels (1 col, 2947 rows)
-
-   * features.txt // full list of features (variable name)
-   * activity_labels.txt // list of integer values referring to the activity
-   * train/X_train.txt // measured features in training data set (561 col, 7352 rows)
-   * train/y_train.txt // training labels (1 col, 7352 rows)
-   * test/X_test.txt // measured features in testing data set (561 col, 2947 rows)
-   * test/y_test.txt // testing labels (1 col, 2947 rows)
+   Text File Name | Description | Row # | Col #
+   -------------- | ----------- | ----- | -----
+   features.txt   | full list of features (variable name) | 2 | 561
+   activity_labels.txt | list of integer values referring to the activity | 2 | 6
+   train/X_train.txt | measured features in training data set | 561 | 7352
+   train/y_train.txt | training labels | 1 | 7352
+   test/X_test.txt | measured features in testing data set | 561 | 2947
+   test/y_test.txt | testing labels | 1 | 2947
 
    "features.txt" basically gives the description of the 561 columns of the X_*.txt
    columns and "activity_labels.txt" the association between the integer in the

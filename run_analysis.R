@@ -7,7 +7,7 @@
 # 1. If data directory not there, retireve it from URL
 ######################################################
 
-if (dir.exists("UCI\ HAR \Dataset")) {
+if (dir.exists("UCI\ HAR\ Dataset")) {
   file.rename("UCI\ HAR\ Dataset","UCI_HAR_Dataset")
   file.rename("UCI_HAR_Dataset/train/Inertial\ Signals","UCI_HAR_Dataset/train/Inertial_Signals")
   file.rename("UCI_HAR_Dataset/test/Inertial\ Signals","UCI_HAR_Dataset/test/Inertial_Signals")
