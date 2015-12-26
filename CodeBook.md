@@ -1,13 +1,13 @@
 CodeBook.md, created 23 December 2015
 
-## Code Book for cleaning accelerometer dataset
+# Code Book for cleaning accelerometer dataset
 
 Explaining actions taken to clean data set implemented in R script "run_analysis.R"
 To run the script: source("run_analysis.R")
 Steps are numbered identically to steps performed in the run_analysis.R script.
 
 
-# 1. Prepare working directory
+## 1. Prepare working directory
    -------------------------
    * Searches for "UCI_HAR_Dataset" or "UCI HAR Dataset" directory. If not found, download the zip
      file again from URL and organizes directory with naming conventions (see below)
@@ -16,7 +16,7 @@ Steps are numbered identically to steps performed in the run_analysis.R script.
      with spaces. Use file.rename function in R.
 
 
-# 2. Load all needed .txt files in UCI_HAR_Dataset dir into data frames
+## 2. Load all needed .txt files in UCI_HAR_Dataset dir into data frames
    ------------------------------------------------------------------
    We are not working directly with the raw data in the Inertial_Signals
    directories of the train and test data so no need to load these.
@@ -34,7 +34,7 @@ Steps are numbered identically to steps performed in the run_analysis.R script.
    y_*.txt column and an activity.
 
 
-# 3. Merge the training and testing data sets
+## 3. Merge the training and testing data sets
    ----------------------------------------
    * checks column numbers are the same before binding data sets by row (rbind)
    * merge separately y_*.txt and X_*.txt files
@@ -44,7 +44,7 @@ Steps are numbered identically to steps performed in the run_analysis.R script.
      and colSums(is.na(all_set)).
 
 
-# 4. Rename column names and activity labelling
+## 4. Rename column names and activity labelling
    ------------------------------------------
    * rename column names using "Activity" and features.txt descriptions
      to rename columns of the binded "all_lab" and "all_set" tables respectively.
@@ -52,26 +52,26 @@ Steps are numbered identically to steps performed in the run_analysis.R script.
      using the table provided in activity_labels.txt
 
 
-5. Subset table keeping only mean and std calculations for each variable
+## 5. Subset table keeping only mean and std calculations for each variable
    ---------------------------------------------------------------------
    * We do this by grepping on column names that contain the "mean" or "std"
      string of characters (no case-sensitivity and no exact match required).
      Result is a table of 79 remaining columns.
 
 
-6. Add the corresponding activity column to the subsetted data set
+## 6. Add the corresponding activity column to the subsetted data set
    ---------------------------------------------------------------
    * Use cbind() function to add the activity labelling corresponding to
      all observations (i.e. rows)
 
 
-7. Summarize the data to get mean of all variables by activity group
+## 7. Summarize the data to get mean of all variables by activity group
    -----------------------------------------------------------------
    * Use "group_by" and "summarise_each" functions provided by dplyr package.
      The result is a tidy dataset with 6 rows (each type of activity). On each row
      is given the mean of the 79 variables for each corresponding activity.
 
 
-8. Save the data in ouput text file
+## 8. Save the data in ouput text file
    -----------------------------------------------------------------
    * Use write.table() function with row.name=FALSE
